@@ -120,10 +120,10 @@ afterEvaluate {
         }
         repositories {
             maven {
-                credentials {
-                    username properties.getProperty("maven.user")
-                    password properties.getProperty("maven.password")
-                }
+                // credentials {
+                //     username properties.getProperty("maven.user")
+                //     password properties.getProperty("maven.password")
+                // }
 
                 def releasesRepoUrl = 'https://oss.sonatype.org/service/local/repositories/releases/content'
                 def snapshotsRepoUrl = 'https://oss.sonatype.org/content/repositories/snapshots'
@@ -132,9 +132,9 @@ afterEvaluate {
         }
     }
 
-    signing {
-        sign publishing.publications.release
-    }
+    // signing {
+    //     sign publishing.publications.release
+    // }
 }
 
 //How to upload
